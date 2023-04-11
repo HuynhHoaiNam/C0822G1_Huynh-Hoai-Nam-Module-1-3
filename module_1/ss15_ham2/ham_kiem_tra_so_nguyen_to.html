@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x = +prompt("Nhập Vào Một Số Nguyên");
+
+    function kiemTraSoNguyenTo(y) {
+
+        for (let i = 2; i < y; i++) {
+            if (y % i == 0) {
+               return false;
+            }
+        }
+        return true;
+    }
+    alert(kiemTraSoNguyenTo(x));
+
+</script>
+</body>
+</html>

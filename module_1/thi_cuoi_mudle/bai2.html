@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    let mangRong = [];
+    let mangRong2 = [];
+    let mangChuaPhanTu = [];
+
+    function timPhanTuTrongMang(mangSo) {
+        document.write(mangSo)
+        let dem = 0;
+        let dem2 = 0;
+        let doDai = +prompt("Nhập độ dài của mảng");
+        for (let i = 0; i < doDai; i++) {
+            mangChuaPhanTu[i] = +prompt("Nhập vào phần tử " + i);
+        }
+        let soLonNhat = mangChuaPhanTu[0];
+        for (let i = 0; i < mangChuaPhanTu.length; i++) {
+            if (mangChuaPhanTu[i] > soLonNhat) {
+                soLonNhat = mangChuaPhanTu[i];
+                dem = i;
+            }
+        }
+        mangRong.push(dem);
+        document.write("Phần tử lớn nhất là " + soLonNhat + " tại vị trí " + mangRong);
+        let soBeNhat = mangChuaPhanTu[0];
+        for (let j = 0; j < mangChuaPhanTu.length; j++) {
+            if (mangChuaPhanTu[j] < soBeNhat) {
+                soBeNhat = mangChuaPhanTu[j];
+                dem2 = j;
+            }
+        }
+        mangRong2.push(dem2);
+        document.write("<br>" + "Phần tử bé nhất là " + soBeNhat + " tại vị trí " + mangRong2);
+        return "Mảng số nguyên:" + mangChuaPhanTu;
+    }
+
+    document.write("<br>" + "Mảng bạn nhập " + timPhanTuTrongMang(mangChuaPhanTu));
+
+</script>
+</html>

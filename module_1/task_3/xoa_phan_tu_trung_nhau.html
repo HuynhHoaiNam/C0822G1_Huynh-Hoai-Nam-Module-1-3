@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+<!--    Xoá các phần tử trùng nhau-->
+    let A = [7, 2, 5, 3, 5, 3];
+    let B = [7, 2, 5, 4, 6, 3, 5, 3];
+    let C = []
+    for (let i = 0; i < B.length; i++) {
+        for (let j = 0; j < A.length; j++) {
+            if (A[j] === B[i]) {
+                B.splice(i, 1);
+            }
+        }
+    }
+    document.write(B);
+</script>
+</body>
+</html>

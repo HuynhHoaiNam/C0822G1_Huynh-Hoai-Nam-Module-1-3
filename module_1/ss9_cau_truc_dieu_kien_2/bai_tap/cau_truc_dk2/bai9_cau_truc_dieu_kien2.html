@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm Tra Cạnh Của Tam Giác</title>
+</head>
+<body>
+<script>
+    let canhA = parseInt(prompt("Nhập Cạnh a"));
+    let canhB = parseInt(prompt("Nhập Cạnh b"));
+    let canhC = parseInt(prompt("Nhập Cạnh c"));
+    let baSoLaCanhCuaTamGiac=false;
+    if (canhA > 0 && canhB > 0 && canhC > 0) {
+        if (canhA + canhB > canhC) {
+            if (canhB + canhC > canhA) {
+                if (canhA + canhC > canhB) {
+                    baSoLaCanhCuaTamGiac=true;
+                }
+            }
+        }
+    }else
+    {
+
+    }
+
+</script>
+</body>
+</html>

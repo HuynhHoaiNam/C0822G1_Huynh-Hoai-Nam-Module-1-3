@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    let n = +prompt("Nhập độ dài của mảng");
+    let arr = new Array(n);
+    let dem = 0;
+    let dem1 = 0;
+    let j;
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = +prompt("Nhập phần tử " + i);
+    }
+    for ( j = 0; j < arr.length; j++) {
+        if (arr[j] < arr[j + 1]) {
+            dem++;
+        }
+        if (arr[j] > arr[j + 1]) {
+            dem1++;
+        }
+    }
+    if (dem === arr.length - j) {
+        alert("true");
+    }
+    if (dem1 === arr.length - j) {
+        alert("true");
+    } else {
+        alert("false");
+    }
+
+
+</script>
+</body>
+</html>

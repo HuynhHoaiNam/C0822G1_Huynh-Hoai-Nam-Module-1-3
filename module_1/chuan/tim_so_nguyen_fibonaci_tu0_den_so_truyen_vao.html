@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    Viết 1 hàm nhận vào 1 số nguyên duy nhất hàm-->
+<!--    trả về mảng số nguyên từ 0 đến số được truyền-->
+<!--    vào và phải thỏa mãn 2 yêu cầu: thứ nhất số đó-->
+<!--    thuộc dãy fibonacci , thứ 2 số đó phải là số nguyên-->
+<!--    tố. In ra mảng đấy-->
+<!--    -->
+</head>
+<body>
+</body>
+<script>
+    function fibonaci() {
+        let number1 = 0;
+        let number2 = 1;
+        let number3;
+        let mang = [0, 1];
+        for (let i = 0; i <= 30; i++) {
+            number3 = number1 + number2;
+            number1 = number2;
+            number2 = number3;
+            mang.push(number3);
+        }
+        return mang;
+    }
+
+    document.write("Dãy số fibonaci:  " + fibonaci() + "<br>");
+
+    function soNguyenTo(so) {
+        if (so < 2) {
+            return false;
+        } else if (so >= 2) {
+            for (let i = 2; i < so; i++) {
+                if (so % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+    }
+
+    function timSo(number) {
+        let arr = [];
+        let arr1 = fibonaci(number);
+        for (let i = 0; i <= number; i++) {
+            for (let j = 0; j < arr1.length; j++) {
+                if (i === arr1[j] && soNguyenTo(i) === true) {
+                    arr.push(i);
+                }
+            }
+        }
+        return "Các số vừa là fibonaci vừa là số nguyên tố là: " + arr;
+    }
+
+    let num = +prompt("Nhập vào số nguyên bất kì ");
+    document.write(timSo(num));
+
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOC LUC HOC SINH</title>
+</head>
+<body>
+<script>
+    let kiemTra = parseInt(prompt("Nhập Điểm Kiểm Tra"));
+    let giuaKi = parseInt(prompt("Nhập Điểm Giữa Kì"));
+    let cuoiKi = parseInt(prompt("Nhập Điểm Cuối Kì"));
+    if ((kiemTra+giuaKi+cuoiKi)/3 >= 8 && (kiemTra+giuaKi+cuoiKi)/3 <= 10){
+        alert("Học Lực Giỏi");
+    }
+    else if((kiemTra+giuaKi+cuoiKi)/3 >= 6){
+        alert("Học Lực Khá");
+    }
+    else if((kiemTra+giuaKi+cuoiKi)/3 >= 4){
+        alert("Học Lực Trung Bình");
+    }
+    else {
+        alert("Học Lực Yếu");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numerators = [5, 2, 5];
+    let denominators = [6, 3, 4];
+    let max = numerators[0] / denominators[0];
+    let dem = 0;
+    for (let i = 0; i < numerators.length; i++) {
+        if (max < numerators[i] / denominators[i]) {
+            dem = i;
+        }
+        // dem=i;
+    }
+    document.writeln(numerators[dem] + "/" + denominators[dem] + " là phân số lớn nhất <br>"+"Có chỉ số là "+dem);
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let tienGoc = +prompt("Nhập số tiền gốc ");
+    let laiSuat =+prompt("Nhập số lãi suất " );
+    let soThang=+prompt("Nhập số tháng ");
+    let tienLai="";
+        for (let i = 1; i <=soThang; i++) {
+            tienLai=tienGoc*laiSuat/100;
+            tienLai=tienLai+tienGoc;
+    }alert("tổng tiền  là " +tienLai);
+
+</script>
+</body>
+</html>

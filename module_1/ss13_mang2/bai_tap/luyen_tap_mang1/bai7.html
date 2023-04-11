@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nhapSo = [];
+    for (let i = 0; i < 10; i++) {
+        nhapSo[i] = +prompt("Nhập vào Một Số")
+    }
+    let dem = +prompt("Nhập Vào");
+    let indexdem = 0;
+    for (let i = 0; i < nhapSo.length; i++) {
+        if (dem === nhapSo[i]) {
+            indexdem = i;
+        }
+    }
+    for ( i = indexdem; i < nhapSo.length; i++) {
+        nhapSo[i] = nhapSo[i + 1]
+    }
+    nhapSo[nhapSo.length - 1] = 0;
+    document.write(nhapSo.toString());
+</script>
+</body>
+</html>

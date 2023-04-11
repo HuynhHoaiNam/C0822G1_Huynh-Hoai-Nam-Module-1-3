@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = 1;
+    let b = a+1;
+    let c = b+1;
+    let d;
+    let dayFibonacci = a + "<br>" + b + "<br>"
+    let i;
+    for (i = 0; i <= 20; i++) {
+        c = a + b;
+        dayFibonacci += c + "<br>";
+        if (c % 5 == 0) {
+            d = c;
+            break
+        }
+    }
+    document.write("Số Chia Hết Cho 5 Là  " + d );
+
+</script>
+</body>
+</html>

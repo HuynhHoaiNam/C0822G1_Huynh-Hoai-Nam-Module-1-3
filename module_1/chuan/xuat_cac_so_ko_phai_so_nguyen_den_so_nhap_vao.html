@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    Viết 1 hàm nhận vào 1 số nguyên bất kì. Hiển thị-->
+<!--    các số KHÔNG phải số nguyên tố từ 0 đến số đấy-->
+</head>
+<body>
+<script>
+    function hienThiKetQua(b) {
+        let mang = [];
+        for (let i = 0; i <= b; i++) {
+            if (kiemTraSoNguyenTo(i) == false) {
+                mang.push(i);
+            }
+        }
+        return mang;
+    }
+
+
+    function kiemTraSoNguyenTo(so) {
+        if (so < 2) {
+            return false;
+        } else if (so >= 2) {
+            for (let i = 2; i < so; i++) {
+                if (so % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+    }
+
+    let x = +prompt("Nhập vào một số");
+    document.write("Các số không phải số nguyên tố trong mảng " + hienThiKetQua(x));
+</script>
+</body>
+</html>

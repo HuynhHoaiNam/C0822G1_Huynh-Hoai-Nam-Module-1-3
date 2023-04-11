@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class QuaTao {
+        constructor() {
+            this.khoiLuong = 10;
+        }
+
+        getkhoiLuong() {
+            return this.khoiLuong;
+        }
+
+        setkhoiLuong(khoiLuong) {
+            this.khoiLuong = khoiLuong;
+        }
+
+        kiemTra() {
+            if (this.khoiLuong > 0) {
+                return "Quả táo còn " + this.khoiLuong + "đv"+"<br>";
+            } else {
+                return "Táo hết rồi"
+            }
+        }
+    }
+
+    class ConNguoi {
+        constructor(ten, gioiTinh, canNang) {
+            this.ten = ten;
+            this.gioitinh = gioiTinh;
+            this.cannang = canNang;
+        }
+
+        getTen() {
+            return this.ten;
+
+        }
+
+        setTen(ten) {
+            this.ten = ten;
+        }
+
+        getCanNang() {
+            return this.cannang;
+        }
+
+        setCanNang(canNang) {
+            this.cannang = canNang;
+        }
+
+        kiemTraKhoiLuong(quaTao) {
+            return quaTao.dieuKien()
+        }
+
+        anTao(tao) {
+            if (tao.khoiLuong > 0) {
+                tao.khoiLuong--;
+                this.cannang++;
+            } else {
+                document.write("Táo đã hết ")
+            }
+        }
+
+        tinhTrang() {
+            return (this.ten + " "+ this.cannang);
+        }
+
+        soTaoConLai() {
+            return QuaTao.khoiLuong;
+        }
+    }
+
+    let adam = new ConNguoi("adam", "nam", 60);
+    let eva = new ConNguoi("eva", "nu", 45);
+    let tao = new QuaTao();
+    document.write(tao.kiemTra()+"<br>");
+    while (tao.khoiLuong > 0) {
+        adam.anTao(tao);
+        document.write("Adam ăn táo" + "<br>");
+        document.write( "Quả táo còn "+ tao.khoiLuong+" đv"+"<br>");
+        document.write( "Cân nặng của  "+adam.tinhTrang()+"kg"+"<br>"+"<br>"+"<hr>");
+        eva.anTao(tao);
+        document.write("Eva ăn táo"+"<br>");
+        document.write("Quả táo còn "+ tao.khoiLuong+ " đv"+"<br>");
+        document.write("Cân nặng của  "+ eva.tinhTrang()+"kg"+"<br>"+"<br>"+"<hr>");
+
+    }
+    adam.anTao();
+    eva.soTaoConLai();
+
+</script>
+</body>
+</html>

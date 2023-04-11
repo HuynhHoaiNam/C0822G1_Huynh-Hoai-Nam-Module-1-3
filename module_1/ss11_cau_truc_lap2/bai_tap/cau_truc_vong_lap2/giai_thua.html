@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = 1;
+    let b = 2;
+    let c = a * b
+    let d;
+    let giaiThua = a * b + "<br>";
+    let i;
+    for (i = 1; i < 20; i++) {
+        d = c * b;
+        c = a * b;
+        a = b;
+        b = c;
+        giaiThua = c * giaiThua + "<br>"
+    }
+    document.write(giaiThua);
+</script>
+</body>
+</html>

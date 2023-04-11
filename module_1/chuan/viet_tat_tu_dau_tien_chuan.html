@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // // chuyển đổi chuỗi thành mảng
+    // let chuoi = "234";
+    // let mang = chuoi.split("");
+    // let a = mang[0];
+    // let b = mang[1];
+    // let c = a * b
+    // let d;
+    // let giaiThua = a * b + "<br>";
+    // for (let i = 0; i < mang.length; i++) {
+    //     let giaiThua = a * b + "<br>";
+    //     d = c * b;
+    //     c = a * b;
+    //     a = b;
+    //     b = c;
+    //     giaiThua = c * giaiThua + "<br>"
+    // }
+    // document.write(giaiThua);
+
+    function vietTat(str1) {
+        str1 = str1.toLowerCase();
+        let newStr = str1.split(" ");
+        let newStr1=[];
+        let newStr2 = [];
+        for (let i = 0; i < newStr.length; i++) {
+            if(newStr[i] !== ""){
+                newStr1.push(newStr[i].split(""));
+            }
+        }
+        if (newStr1.length==1){
+            return "chuỗi này chỉ có một từ nên không cần viết tắt"
+        }else {
+            for (let i = 0; i < newStr1.length; i++) {
+                newStr1[i][0] = newStr1[i][0].toUpperCase();
+                newStr1[i]= newStr1[i].join("");
+                newStr2.push(newStr1[i][0]);
+            }
+            return newStr2.join("");
+        }
+    }
+    str = prompt("nhap chuoi");
+    alert(vietTat(str));
+</script>
+</body>
+</html>

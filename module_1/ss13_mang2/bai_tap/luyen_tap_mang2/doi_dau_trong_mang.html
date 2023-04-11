@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mang = [];
+    for (let i = 0; i < 10; i++) {
+        mang[i] = prompt("Nhập Vào Mảng");
+    }
+    for (let j = 0; j < mang.length; j++) {
+        if (mang[j] === "-") {
+            mang[j] = "_";
+        }
+    }
+    document.write(mang.toString());
+</script>
+</body>
+</html>

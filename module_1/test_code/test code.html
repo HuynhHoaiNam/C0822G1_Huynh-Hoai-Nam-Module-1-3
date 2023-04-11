@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--    Nhập n độ dài của màng-->
+    <!--    Khai báo mảng gồm n phần tử-->
+    <!--    Dùng for nhập giá trị cho các phân tử-->
+    <!--    Tính giá trị trung bình của các phần tử chia hết cho 3 và ở vị trí chẵn-->
+</head>
+<body>
+<script>
+    let n = +prompt("Nhập Độ Dài CỦa Mảng");
+    let arr = new Array(n);
+    let dem = 0;
+    let count = 0;
+    for (let j = 0; j < arr.length; j++) {
+        arr[j] = +prompt("Nhập pt thu " + j);
+    }
+    document.write(arr + '<br>')
+
+    for (let j = 0; j < arr.length; j++) {
+        if (arr[j] % 3 == 0 && j % 2 == 0) {
+            dem++;
+            count = count + arr[j];
+        }
+    }
+    alert(dem);
+    alert(count);
+    document.write("Giá trị Trung Bình" + count / dem);
+
+</script>
+</body>
+</html>

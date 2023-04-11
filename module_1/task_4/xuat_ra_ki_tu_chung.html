@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // chuoi1.includes(chuoi2)
+    //includes là check xem phần tử mảng 1 có trong mảng 2 hay ko
+
+
+    // let chuoi1 = prompt("Nhập chuỗi 1");
+    // let chuoi2 = prompt("Nhập chuỗi 2");
+    let chuoi1 = "1534";
+    let chuoi2 = "5406";
+    let mangKiTu = [];
+    let array1 = chuoi1.split("");
+    let array2 = chuoi2.split("");
+    for (let i = 0; i < array1.length; i++) {
+        for (let j = 0; j < array2.length; j++) {
+            if (array1[i] === array2[j]) {
+                mangKiTu.push(array1[i]);
+                array1.splice(i,1);
+                array2.splice(j,1);
+                // i--;
+                // j--;
+            }
+
+        }
+    }alert('Có '+mangKiTu.length+'  kí tự chung là:  '+mangKiTu);
+    // for (let i = 0; i <array1.length ; i++) {
+    //         if (array1.includes(array2)!==false){
+    //             mangKiTu.push(array1);
+    //         }
+    // } document.write(mangKiTu);
+
+</script>
+</body>
+</html>

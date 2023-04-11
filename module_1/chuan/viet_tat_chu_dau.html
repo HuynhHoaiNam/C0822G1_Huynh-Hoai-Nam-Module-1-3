@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--    Bài 2: Viết hàm có tham số truyền vào là một chuỗi các ký tự.Hàm thực hiện tạo ra một-->
+    <!--    cụm từ viết tắt-->
+    <!--    - Nếu chuỗi có nhiều hơn hoặc bằng 2 từ trở lên thì hàm sẽ trả về 1 cụm từ viết tắt-->
+    <!--    là lấy các ký tự đầu tiên của từng từ và đổi sang in hoa.-->
+    <!--    Ví dụ: object Oriented programming =>; kết quả trả về :OOP-->
+    <!--    - Nếu Chuỗi chỉ có duy nhất 1 từ thì kết quả trả về là 1 thông báo &quot;Chuỗi chỉ có 1-->
+    <!--    từ nên không cần viết tắc;
+    <
+    !--    - Ví du: ObjectOriented =>; chuỗi này chỉ được tính chỉ có 1 từ-->
+</head>
+<body>
+<script>
+
+
+    function tuVietTat(str) {
+        let mang = str.toUpperCase().split(" ");
+
+        let mang2 = [];
+        if (mang.length == 1) {
+            return "mảng có 1 kí tự ko cần viết hoa";
+        } else {
+            for (let i = 0; i < mang.length; i++) {
+                if (mang[i][0] !== "") {
+                    mang2.push(mang[i][0]);
+                }
+            }
+            return mang2;
+        }
+    }
+
+    let chuoiKiTu = prompt("nhập vào 1 chuỗi");
+    // let chuoiKiTu = "object Oriented programming";
+   document.write(tuVietTat(chuoiKiTu));
+
+
+
+</script>
+</body>
+</html>

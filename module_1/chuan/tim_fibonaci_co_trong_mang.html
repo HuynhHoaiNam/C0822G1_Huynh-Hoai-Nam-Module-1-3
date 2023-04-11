@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--    Bài 3: Viết hàm có tham số truyền vào là một mảng ,tìm các số fibonaci có trong-->
+    <!--    mảng(số này đã làm bài tập ở jame). Hàm trả về 1 mảng số fibonaci được tìm thấy-->
+    <!--    trong mảng ( Yêu cầu sắp xếp tăng dần).-->
+</head>
+<body>
+<script>
+
+    let soTuNhien = [5, 23, 8, 5, 18, 4, 7, 6, 9, 20, 1];
+    soTuNhien.sort((a, b) => a - b);
+    function timSoFibonaci(number) {
+        let mang1 = [];
+        let mang2 = [];
+        let a = 0;
+        let b = 1;
+        let c;
+        for (let i = 0; i < number.length; i++) {
+            c = a + b;
+            a = b;
+            b = c;
+            mang1.push(c);
+        }
+        for (let i = 0; i < mang1.length; i++) {
+            for (let j = 0; j < number.length; j++) {
+                if (number[j] === mang1[i]) {
+                    mang2.push(number[j]);
+                }
+            }
+        }
+        return mang2;
+    }
+
+    document.write("Cho mảng có các phần tử: " + soTuNhien + "<br>");
+    document.write("Các số fibonaci có trong mảng là: " + timSoFibonaci(soTuNhien));
+
+</script>
+</body>
+</html>

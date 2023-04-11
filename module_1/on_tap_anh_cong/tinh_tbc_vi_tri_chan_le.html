@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let size = +prompt("Nhập vào độ dài của mảng");
+    let doDai = new Array(size);
+    let trungBinhCong = 0;
+    let dem = 0;
+    for (let i = 0; i < doDai.length; i++) {
+        doDai[i] = +prompt("Nhập vào phần tử thứ " + i);
+        if (doDai[i] && i % 2 !== 0) {
+            dem++;
+            trungBinhCong = trungBinhCong + doDai[i]
+        }
+    }
+    document.write("Giá trị trung bình tại vị trí lẻ " + trungBinhCong / dem);
+</script>
+</html>

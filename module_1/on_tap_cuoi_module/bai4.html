@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="mamay" placeholder="nhập mã máy">
+<input type="text" id="tenmay" placeholder="nhập tên máy">
+<input type="text" id="hangsanxuat" placeholder="nhập hãng sản xuất">
+<input type="text" id="giaban" placeholder="nhập giá bán">
+<input type="button" onclick="themMoi()" value="Thêm mới máy tính">
+<p id="display"></p>
+<script>
+    class Maytinh {
+        constructor(mamay, tenmay, hangsanxuat, giaban) {
+            this.mammay = mamay;
+            this.tenmay = tenmay;
+            this.hangsanxuat = hangsanxuat;
+            this.giaban = giaban;
+        }
+
+        setMaMay(mamay) {
+            this.id = mamay;
+        }
+
+        setTenMay(tenmay) {
+            this.name = tenmay;
+        }
+
+        setHangSanXuat(hangsanxuat) {
+            this.age = hangsanxuat;
+        }
+
+        setGiaBan(giaban) {
+            this.age = giaban;
+        }
+
+        getMaMay() {
+            return this.mammay;
+        }
+
+        getTenMay() {
+            return this.tenmay;
+        }
+
+        getHangSanXuat() {
+            return this.hangsanxuat;
+        }
+
+        getGiaBan() {
+            return this.giaban;
+        }
+    }
+
+    let mayTinh1 = new Maytinh("AA", "ausus", "usus", 20);
+    let mayTinh2 = new Maytinh("BB", "acer", "acer", 23);
+    let mayTinh3 = new Maytinh("CC", "dell", "dell", 21);
+    let danhSachMayTinh = [mayTinh1, mayTinh2, mayTinh3];
+    display(danhSachMayTinh);
+
+
+    function display(danhSach) {
+        let tableString = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <th >Mã Máy</th>\n' +
+            '        <th>Tên Máy</th>\n' +
+            '        <th>Hãng Sản Xuất</th>\n' +
+            '        <th>Giá Bán</th>\n' +
+            '    </tr>';
+        for (let i = 0; i < danhSach.length; i++) {
+            tableString += '<tr>\n' +
+                '        <td>' + danhSach[i].getMaMay() + '</td>\n' +
+                '        <td>' + danhSach[i].getTenMay() + '</td>\n' +
+                '        <td>' + danhSach[i].getHangSanXuat() + '</td>\n' +
+                '        <td>' + danhSach[i].getGiaBan() + '</td>\n' +
+                '    </tr>';
+        }
+
+        tableString += '</table>';
+        document.getElementById("display").innerHTML = tableString;
+    }
+    function themMoi() {
+        let maMay = document.getElementById("mamay").value;
+        let tenMay = document.getElementById("tenmay").value;
+        let hangSanXuat = document.getElementById("hangsanxuat").value;
+        let giaBan = document.getElementById("giaban").value;
+        let mayTinhMoi = new Maytinh(maMay, tenMay, hangSanXuat, giaBan);
+        danhSachMayTinh.push(mayTinhMoi);
+        display(danhSachMayTinh);
+        document.getElementById("mamay").value = "";
+        document.getElementById("tenmay").value = "";
+        document.getElementById("hangsanxuat").value = "";
+        document.getElementById("giaban").value = "";
+
+    }
+</script>
+</body>
+</html>

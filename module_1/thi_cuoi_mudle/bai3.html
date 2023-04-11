@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    let dem = 0;
+    function kiemTra(soNhapVao) {
+        let mangRong = [];
+        let mangChuaPhanTu = [];
+        let doDai = +prompt("Nhập độ dài của mảng");
+        for (let i = 0; i < doDai; i++) {
+            mangChuaPhanTu[i] = +prompt("Nhập vào phần tử");
+        }
+        for (let j = 0; j < mangChuaPhanTu.length; j++) {
+            for (let i = 1; i < mangChuaPhanTu.length; i++) {
+                if (mangChuaPhanTu[j] === mangChuaPhanTu[i]) {
+                    mangChuaPhanTu.splice(i, 1);
+                    j--;
+                }
+            }
+        }
+        for (let k = 0; k < mangChuaPhanTu.length; k++) {
+            if (mangChuaPhanTu[k] % soNhapVao === 0) {
+                dem++
+                mangRong.push(mangChuaPhanTu[k]);
+            }
+        }
+
+        return mangRong;
+    }
+
+    let soNguyen = 2;
+   kiemTra(soNguyen);
+    document.write("Có " + dem + " sô chia hết cho " + soNguyen);
+
+</script>
+</html>

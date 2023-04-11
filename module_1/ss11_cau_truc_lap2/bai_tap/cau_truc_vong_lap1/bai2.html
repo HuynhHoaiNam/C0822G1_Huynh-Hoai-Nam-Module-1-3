@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let  num = parseInt(prompt("Nhập Vào Nhiệt Độ Cơ Thể"))
+    while (num < 100 || num>20) {
+        if (num < 20){
+            alert("Tăng Nhiệt Độ");
+            num=prompt("Nhập Nhiệt ĐỘ")
+        }
+        if(num>100) {
+            alert("Giảm Nhiệt Độ");
+            num = prompt("Nhập Nhiệt Độ")
+        }
+    }
+
+</script>
+</body>
+</html>

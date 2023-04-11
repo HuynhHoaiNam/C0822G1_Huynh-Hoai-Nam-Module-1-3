@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng Dụng Máy Tính</title>
+    <h1 style="color: blue">CaCuLaTor</h1>
+</head>
+<body>
+<table>
+    <tr>
+        <th><input value="a" type="number" name="Nhập số thứ nhất" id="a"></th>
+        <th><input value="b" type="number" name="Nhập số thứ hai" id="b"></th>
+        <th>
+            <button type="text" onclick="cong()" style="background: indianred">Cộng +</button>
+        </th>
+        <th>
+            <button type="text" onclick="tru()" style="background: indianred">Trừ -</button>
+        </th>
+        <th>
+            <button type="text" onclick="nhan()" style="background: indianred">Nhân *</button>
+        </th>
+        <th>
+            <button type="text" onclick="chia()" style="background: indianred">Chia /</button>
+        </th>
+    </tr>
+    <script>
+        function cong() {
+            let a = +document.getElementById('a').value;
+            let b = +document.getElementById('b').value;
+            alert(a + b);
+        }
+
+        function tru() {
+            let a = document.getElementById('a').value;
+            let b = document.getElementById('b').value;
+            alert(a - b);
+        }
+
+        function nhan() {
+            let a = document.getElementById('a').value;
+            let b = document.getElementById('b').value;
+            alert(a * b);
+        }
+
+        function chia() {
+            let a = document.getElementById('a').value;
+            let b = document.getElementById('b').value;
+            alert(a / b);
+        }
+    </script>
+</table>
+</body>
+</html>

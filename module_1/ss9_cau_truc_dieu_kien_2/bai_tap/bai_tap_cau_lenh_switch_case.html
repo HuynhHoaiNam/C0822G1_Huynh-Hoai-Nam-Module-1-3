@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Số Ngày</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th><input type="number" value="NhapVaoThang" id="month"></th>
+        <th>
+            <button type="button" value="TinhSoNgay" onclick="day()">Tính Số Ngày</button>
+        </th>
+    </tr>
+</table>
+<p id="KetQua"></p>
+<script>
+    function day() {
+        let month = parseInt(document.getElementById("month").value);
+        switch (month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 9:
+            case 11:
+            case 12:
+                document.getElementById("KetQua").innerText = "Tháng " + month + " Có 31 Ngày";
+                break;
+            case 2:
+                document.getElementById("KetQua").innerText = "Tháng " + month + "Có 28 hoặc 29 Ngày";
+                break
+            case 4:
+            case 6:
+            case 8:
+            case 10:
+                document.getElementById("KetQua").innerText = "Tháng " + month + " Có 30 Ngày";
+                break;
+            default:
+                document.getElementById("KetQua").innerText = "Không Có Tháng Này";
+        }
+    }
+</script>
+</body>
+</html>

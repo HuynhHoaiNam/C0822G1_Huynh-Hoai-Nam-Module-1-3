@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--    Xây dựng 1 hàm nhận vào 1 mảng số nguyên và-->
+    <!--    1 số nguyên number bất kì. Hàm trả về 1 mảng-->
+    <!--    thỏa mãn điều kiện sau:-->
+    <!--    Nếu number là số lẻ, thì tất cả số chẵn trong-->
+    <!--    mảng sẽ tăng lên 1 đơn vị.Ngược lại nếu-->
+    <!--    number là số chẵn thì tất cả số lẻ trong mảng-->
+    <!--    tăng lên 1 đơn vị. Ngoài ra tất cả các số trong-->
+    <!--    mảng trùng với number sẽ được đổi thành -1-->
+</head>
+<body>
+<p id="hu"></p>
+<p id="hi"></p>
+<p id="ha"></p>
+</body>
+<script>
+    function tangDonViCuaPhanTu(a, x) {
+        for (let i = 0; i < a.length; i++) {
+            if (x === a[i]) {
+                a[i] = -1;
+            }
+        }
+        if (x % 2 !== 0) {
+            for (let i = 0; i < a.length; i++) {
+                if (a[i] % 2 === 0) {
+                    a[i]++;
+                }
+            }
+        }  if (x % 2 === 0) {
+            for (let i = 0; i < a.length; i++) {
+                if (a[i] % 2 !== 0) {
+                    a[i]++;
+                }
+            }
+        }
+        return a;
+    }
+
+
+    let mang = [1, 5, 3, 6, 8, 9, 3];
+    document.getElementById("hu").innerText = "Cho 1 mảng " + mang;
+    let number1 = +prompt("nhập vào một số nguyên bất kì");
+    tangDonViCuaPhanTu(mang, number1);
+    document.getElementById("hi").innerText = "Số nhập vào " + number1;
+    document.getElementById("ha").innerText = "Mảng mới " + mang;
+
+</script>
+</html>

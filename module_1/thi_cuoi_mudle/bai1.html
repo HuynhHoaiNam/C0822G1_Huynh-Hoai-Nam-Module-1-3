@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let uocN = [];
+    let soNhap = prompt("Nhập vào 1 số");
+    while (soNhap < 0|| isNaN(soNhap)) {
+        soNhap = prompt("nhập lại");
+    }
+    for (let i = 0; i <= soNhap; i++) {
+        if (soNhap % i == 0) {
+            uocN.push(i)
+        }
+    }
+    document.write(uocN);
+</script>
+</body>
+</html>

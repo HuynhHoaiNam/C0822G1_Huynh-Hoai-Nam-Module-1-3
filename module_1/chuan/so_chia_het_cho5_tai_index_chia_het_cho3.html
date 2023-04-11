@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--    Bài 1: Nhập từ bàn phím mảng số nguyên gồm n phần tử (n<=50). Hiển thị ra màn hình-->
+    <!--    danh sách các phần tử của mảng, hiện thị giá trị trung bình của các phần tử chia hết-->
+    <!--    cho 5 ở vị trí chia hết cho 3 ( phần tử có index chia hết cho 3)-->
+    <!--    Ví dụ: [15,2,3,5,10,15,7,8,9,10]. Kết quả sau khi thực hiện là: (15+5+10)/3) = 10-->
+</head>
+<body>
+<script>
+    // let arr = +prompt("Nhập độ dài của mảng");
+    // let arr = new Array(arr);
+    // let tinhTong = 0;
+    // let dem = 0;
+    // for (let i = 0; i < arr.length; i++) {
+    //     if (arr.length > 50) {
+    //         document.write("Lỗi:"+"<br>");
+    //         break;
+    //     } else {
+    //         arr[i] = +prompt("Nhập các phần tử của mảng" + i);
+    //         if (arr[i] % 5 === 0 && i % 3 === 0) {
+    //             dem++;
+    //             tinhTong = tinhTong + arr[i];
+    //         }
+    //     }
+    // }
+    // document.write("Các phần tử của mảng: " + arr + "<br>");
+    // document.write("Giá trị trung bình các phần tử chia hết cho 5 tại index chia hết cho3: " + tinhTong / dem);
+
+
+    let doDaiMang = +prompt("Nhập độ dài của mảng");
+    // let arr;
+    // let arr = new Array(doDaiMang);
+    let mang = [];
+    let tinhTong = 0;
+    let dem = 0;
+
+    if (doDaiMang > 50 || doDaiMang < 0) {
+        for (; doDaiMang > 50 || doDaiMang < 0;) {
+            doDaiMang = +prompt("Nhập độ dài của mảng");
+        }
+    }
+        for (let i = 0; i < doDaiMang; i++) {
+            mang[i] = +prompt("Nhập các phần tử của mảng " + i);
+    }
+    for (let i = 0; i < mang.length; i++) {
+        if (mang[i] % 5 === 0 && i % 3 === 0) {
+            dem++;
+            tinhTong = tinhTong + mang[i];
+        }
+    }
+    document.write("Các phần tử của mảng: " + mang + "<br>");
+    document.write("Giá trị trung bình các phần tử chia hết cho 5 tại index chia hết cho3: " + tinhTong / dem);
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--    Viết 1 hàm nhận vào 1 mảng các số nguyên.-->
+    <!--    Đếm số lần xuất hiện của các phần tử trong mảng-->
+    <!--    đó. Ví dụ:-->
+    <!--    [ 1,2,3,3,2,4] => 1 : 1 lần , 2 : 2 lần, 3: 2 lần, 4: 1-->
+    <!--    lần.-->
+</head>
+<body>
+</body>
+<script>
+    let num = +prompt("Nhập độ dài mảng ");
+    let mang = [];
+    for (let i = 0; i < num; i++) {
+        mang[i] = +prompt("Nhập phần tử thứ " + i);
+    }
+
+    let dem = 1;
+    let mangRong = [];
+
+    function demSoLanXuatHien(number) {
+        for (let i = 0; i < number.length; i++) {
+            for (let j = i + 1; j < number.length; j++) {
+                if (number[i] === number[j]) {
+                    dem++;
+                    number.splice(j, 1);
+                    j--;
+                }
+            }
+            mangRong.push(dem);
+            dem = 1;
+        }
+        for (let i = 0; i < number.length; i++) {
+            document.write("Số " + number[i] + " xuất hiện " + mangRong[i] + " lần" + "<br>");
+        }
+    }
+
+    demSoLanXuatHien(mang);
+
+</script>
+</html>

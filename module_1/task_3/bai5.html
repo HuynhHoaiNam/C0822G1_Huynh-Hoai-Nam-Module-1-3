@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<input type="text"  value="Chọn đồ uống">-->
+<script>
+    // let goiDoUong = prompt("0 (cafe), 1(cam vắt), 2(nước ép cà rốt), 3(nước ép cà chua), 4(nước lọc), 5(nước dừa), 6(thoát gọi món)");
+    // let mang = ["0 (cafe)", "1(cam vắt)", "2(nước ép cà rốt)", "3(nước ép cà chua)", "4(nước lọc)", "5(nước dừa)", "6(thoát gọi món)"];
+    let gia = [15, 10, 9, 11, 5, 20, 0];
+    // let soLuong = prompt("Nhập Số Lượng");
+    // alert("Tổng giá tiền " + gia[goiDoUong] * soLuong + "K");
+
+    do {
+        goiDoUong = prompt("0 (cafe), 1(cam vắt), 2(nước ép cà rốt), 3(nước ép cà chua), 4(nước lọc), 5(nước dừa), 6(thoát gọi món)");
+        soLuong = prompt("Nhập Số Lượng");
+        alert("Tổng giá tiền " + gia[goiDoUong] * soLuong + "K");
+    } while (goiDoUong < 6);
+    alert("kết thúc gọi món");
+
+
+</script>
+</body>
+</html>

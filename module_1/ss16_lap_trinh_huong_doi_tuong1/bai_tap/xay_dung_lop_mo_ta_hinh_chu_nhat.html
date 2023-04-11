@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="veHinh"></canvas>
+<script>
+
+    class HinhChuNhat {
+        constructor(dai, rong) {
+            this.chieuDai = dai;
+            this.chieuRong = rong;
+        }
+
+        dienTich() {
+            return this.chieuDai * this.chieuRong;
+        }
+
+        chuVi() {
+            return (this.chieuDai + this.chieuRong) * 2;
+        }
+
+        veHinh() {
+            var chuNhat = document.getElementById("veHinh");
+            var canvas = chuNhat.getContext("2d");
+            canvas.fillStyle = "#0000ff";
+            canvas.fillRect(0, 0, chieuDai, chieuRong);
+        }
+    }
+
+    let chieuDai = +prompt("nhập chiều dài");
+    let chieuRong = +prompt("nhập chiều rộng");
+    let value = new HinhChuNhat(chieuDai, chieuRong);
+    document.write("<br>"+"Chu vi hình chữ nhật là " + value.chuVi()+"<br>");
+    document.write("Diện tích hình chữ nhật là " + value.dienTich());
+    document.write(value.veHinh());
+
+
+</script>
+</body>
+</html>

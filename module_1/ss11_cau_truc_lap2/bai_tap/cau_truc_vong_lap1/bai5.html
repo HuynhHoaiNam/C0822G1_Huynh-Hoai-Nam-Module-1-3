@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = 1;
+    let b = 2;
+    let c = a + b;
+    let d=a+b+c
+    let dayFibonacci = a + "<br>" + b + "<br>"
+    let i;
+    for (i = 0; i <= 20; i++) {
+        c = a + b;
+        a = b;
+        b = c;
+        dayFibonacci += c + "<br>";
+        d +=c;
+    }
+    document.write("Tổng 20 Số Đầu Tiên Trong Dãy Fibonacci Là  " + d );
+</script>
+</body>
+</html>

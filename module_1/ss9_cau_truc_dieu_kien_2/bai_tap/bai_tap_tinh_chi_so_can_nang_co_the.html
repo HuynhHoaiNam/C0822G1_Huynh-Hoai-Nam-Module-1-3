@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh Chi So Can Nang</title>
+    <h1>Tính Chỉ Số Cân Nặng</h1>
+</head>
+<body>
+<span>Nhập Cân Nặng : (Kg) </span>
+<input type="text" name="canNang" id="canNang">
+<br><br>
+<span> Nhập Chiều Cao : (M)</span>
+<input type="text" name="chieuCao" id="chieuCao">
+<br><br>
+<input type="button" value="kiemTra" onclick="kiemTra()">
+<script>
+    function kiemTra() {
+        let canNang = document.getElementById('canNang').value;
+        let chieuCao = document.getElementById('chieuCao').value;
+        let BMI = canNang/(chieuCao*chieuCao);
+    if (BMI < 18)
+        alert('Bạn Đang Gầy Cấp 1');
+     else if (BMI < 25)
+        alert('Bạn Đang Gầy Cấp 2');
+     else if (BMI < 30)
+        alert('Bạn Đang Bình Thường');
+     else
+        alert('Bạn Đang Bị Béo Phì');
+    }
+</script>
+</body>
+</html>

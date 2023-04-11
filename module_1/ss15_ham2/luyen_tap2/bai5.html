@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function kiemTraSo() {
+        if (so1 > so2 && so1 > so3) {
+            return so1;
+        } else if (so2 > so3) {
+           return so2;
+        } else {
+            return so3;
+        }
+    }
+
+    so1 = +prompt("Nhập Số Thứ Nhất");
+    so2 = +prompt("Nhập Số Thứ Hai");
+    so3 = +prompt("Nhập Số Thứ Ba");
+    alert(kiemTraSo());
+
+</script>
+</body>
+</html>

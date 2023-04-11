@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function findMax(array) {
+        let max = array[0][0];
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[i].length; j++) {
+                if (max < array[i][j]) {
+                    max = array[i][j];
+                }
+            }
+        }
+        return  max;
+    }
+
+    function findMin(array) {
+        let min = array[0][0];
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[i].length; j++) {
+                if (min > array[i][j]) {
+                    min = array[i][j];
+                }
+            }
+        }
+        return  min;
+    }
+
+    let arr = [
+        [1, 4, 5],
+        [5, 4, 8]
+    ];
+
+    alert("Số Lớn Nhất Là "+ findMax(arr));
+    alert("Số Bé Nhất Là "+findMin(arr));
+
+
+
+
+
+    // let mang1 = +prompt("nhập đồ dài mảng lớn");
+    // let mang2 = +prompt("nhập độ dài mảng nhỏ");
+    // let sum = 0;
+    // for (let i = 0; i <= mang1; i++) {
+    //     arr[i] = [];
+    //     for (let j = 0; j <= mang2; j++) {
+    //         arr[i][j] = +prompt("nhập phần tử " + j + " của mảng " + i);
+    //         if (arr[i][j] < arr[i][j + 1]) {
+    //             sum = arr[i][j + 1];
+    //             arr[i][j]=arr[i][j+1];
+    //         }
+    //     }
+    // }
+    // document.write(sum);
+</script>
+</body>
+</html>

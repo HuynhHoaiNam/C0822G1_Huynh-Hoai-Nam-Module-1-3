@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class ChuyenDoi {
+        doC;
+
+        constructor(doC) {
+            this.doC = doC;
+        }
+
+        doCSangDoF() {
+            return this.doC * 9 / 5 + 32;
+        }
+
+        doCSangkenvin() {
+            return this.doC + 273.15;
+        }
+    }
+
+    // let number2 = +prompt("Nhập Vào Một Giá Trị Độ C ")
+    let number2 = +prompt("Nhập Vào Đê Bạn Êiiiii !! ")
+    let number = new ChuyenDoi(number2);
+    document.write(number2 + " Độ C" + " = " + number.doCSangDoF() + "  Độ F" + "<br>");
+    document.write(number2 + " Độ C" + " = " + number.doCSangkenvin() + "  Kenvin");
+</script>
+</body>
+</html>

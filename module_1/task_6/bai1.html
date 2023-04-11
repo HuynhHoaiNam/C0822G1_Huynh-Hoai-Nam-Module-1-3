@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Sổ Xố CodeGym</h2>
+<input type="text" id="so1">
+<input type="text" id="so2">
+<input type="text" id="so3">
+<input type="text" id="so4">
+<input type="text" id="so5">
+<input type="text" id="so6">
+<br/><br>
+<input type="button" onclick="randoomList()" value="Mua Vé">
+<input type="button" onclick="ketQua()" value="Xem Kết Quả">
+<script>
+    let ketQua = [12, 2, 18, 51, 72, 6];
+    let dem = 0;
+    let luaChon = +prompt("Bạn có 2 lụa chọn \n" + "1: Tự chọn số \n" + "2: Hệ thống tự chọn");
+
+    switch (luaChon) {
+        case 1:
+            muaVeSo();
+            break;
+        case 2:
+            randoomList();
+    }
+
+    function muaVeSo() {
+        let danhSachSo = [];
+        let so1 = prompt("nhap so 1").value;
+        danhSachSo.push(so1);
+        let so2 = prompt("nhap so 2").value;
+        danhSachSo.push(so2);
+        let so3 = prompt("nhap so 3").value;
+        danhSachSo.push(so3);
+        let so4 = prompt("nhap so 4").value;
+        danhSachSo.push(so5);
+        let so5 = prompt("nhap so 5").value;
+        danhSachSo.push(so5);
+        let so6 = prompt("so6").value;
+        danhSachSo.push(so6);
+         danhSachSo = [so1, so2, so3, so4, so5, so6];
+        return danhSachSo;
+    }
+
+    function randoomList() {
+        let randoom = [];
+        let randoom1 = (Math.floor(Math.random() * 10));
+        let randoom2 = (Math.floor(Math.random() * 10));
+        let randoom3 = (Math.floor(Math.random() * 10));
+        let randoom4 = (Math.floor(Math.random() * 10));
+        let randoom5 = (Math.floor(Math.random() * 10));
+        let randoom6 = (Math.floor(Math.random() * 10));
+        document.getElementById("so1").value = randoom1;
+        document.getElementById("so2").value = randoom2;
+        document.getElementById("so3").value = randoom3;
+        document.getElementById("so4").value = randoom4;
+        document.getElementById("so5").value = randoom5;
+        document.getElementById("so6").value = randoom6;
+         randoom = [randoom1, randoom2, randoom3, randoom4, randoom5, randoom6];
+        return randoom;
+    }
+
+
+
+
+
+    function ketQua() {
+        if (luaChon == 1 || luaChon == 2) {
+            for (let i = randoomList().length; i > 0; i--) {
+                if (randoomList()[i] === ketQua[i]) {
+                    dem++;
+                }
+            }
+            if (dem === 6) {
+                alert("Giải nhất");
+            } else if (dem !== 6) {
+                for (let i = randoomList().length; i > 1; i--) {
+                    if (randoomList()[i] === ketQua[i]) {
+                        dem++;
+                    }
+                }
+                if (dem === 5) {
+                    alert("Giải nhì");
+                } else if (dem !== 5) {
+                    for (let i = randoomList().length; i > 4; i--) {
+                        if (randoomList()[i] === ketQua[i]) {
+                            dem++;
+                        }
+                    }
+                    if (dem === 3) {
+                        alert("giải kk");
+                    }
+                }
+            }
+        }
+        return ketQua;
+    }
+
+</script>
+</body>
+</html>

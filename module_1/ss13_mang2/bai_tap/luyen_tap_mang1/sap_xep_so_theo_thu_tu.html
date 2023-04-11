@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numBers = [1, 3, 4, 8, 2, 0, 6,9];
+    let luuTru = 0;
+    for (let i = 0; i < numBers.length; i++) {
+        for (let j = 0; j < numBers.length; j++) {
+            if (numBers[j] < numBers[j + 1]) {
+                luuTru = numBers[i];
+                numBers[j] = numBers[j + 1];
+                numBers[j + 1]=luuTru;
+            }
+        }
+    }
+    document.write(numBers);
+
+</script>
+</body>
+</html>

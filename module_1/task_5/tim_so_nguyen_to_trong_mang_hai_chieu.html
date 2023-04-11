@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [[1, 2, 3, 5, 5], [4, 5, 2, 9, 11]];
+    let ketQua = "";
+    let dem = 0;
+
+    function isPrime(array) {
+        if (array < 2) {
+            return false;
+        } else if (array >= 2) {
+            for (let i = 2; i < array; i++) {
+                if (array % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+
+        }
+    }
+
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array[i].length; j++) {
+            if (isPrime(array[i][j])) {
+                dem++;
+                ketQua += array[i][j] + ",";
+            }
+        }
+    }
+    document.write("Có " + dem + " số nguyên tố. " + "<br>" + "Các số nguyên tố " + ketQua);
+
+
+</script>
+</body>
+</html>

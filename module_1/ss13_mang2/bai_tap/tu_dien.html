@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<table>
+
+    <p id="result"></p>
+    <body>
+    <script>
+        // function submit() {
+        //     let tiengAnh = ["red", "blue", "yellow", "green"]
+        //     let tiengViet = ["đỏ", "xanh dương", "vàng", "xanh lá"]
+        //
+        //     let str = document.getElementById("nhap").value
+        //     let result = ""
+        //     let indexTA = -1
+        //     for (let i = 0; i < tiengAnh.length; i++) {
+        //         if (str == tiengAnh[i]) {
+        //             indexTA = i;
+        //         }
+        //     }
+        //     if (indexTA != -1) {
+        //         document.getElementById("result").innerText = tiengViet[indexTA];
+        //     } else {
+        //         document.getElementById("result").innerText = "no"
+        //     }
+        // }
+
+            let tiengAnh = ["red", "blue", "yellow", "green"];
+            let tiengViet = ["đỏ", "xanh dương", "vàng", "xanh lá"];
+
+            let str = prompt("nhap vao tu can tim");
+            let result = ""
+            let indexTA = -1
+            for (let i = 0; i < tiengAnh.length; i++) {
+                if (str == tiengAnh[i]) {
+                    indexTA = i;
+                }
+            }
+            if (indexTA != -1) {
+                document.getElementById("result").innerText = tiengViet[indexTA];
+            } else {
+                document.getElementById("result").innerText = "no"
+            }
+
+    </script>
+    </body>
+</html>

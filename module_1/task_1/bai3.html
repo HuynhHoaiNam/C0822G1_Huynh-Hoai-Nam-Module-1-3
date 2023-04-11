@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soLuong=+prompt("Nhập Vào Số Lượng ");
+    for (let i = 0; i < soLuong; i++) {
+        for (let h = soLuong; h > i; h--) {
+            document.writeln("&nbsp;&nbsp;")
+        }
+        for (let j = 0; j < i * 2 - 1; j++) {
+            if (i == 0 && i == soLuong) {
+            }
+            document.writeln("*");
+        }
+        document.writeln("<br>");
+    }
+</script>
+</body>
+</html>

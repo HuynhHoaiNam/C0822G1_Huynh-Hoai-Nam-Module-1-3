@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển Đổi Tiền Tệ</title>
+    <style>
+        th {
+            height: 20px;
+        }
+
+        th {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>From Curency</th>
+        <th>To Curency</th>
+    </tr>
+    <tr>
+        <th><input type="text" id="GiaTri"/></th>
+        <th><select name="Tien" id="Nhap1">
+            <option value="USD">USD</option>
+            <option value="VND">VND</option>
+        </select>
+        </th>
+        <th>
+            <select name="Tien" id="Nhap2">
+                <option value="USD">USD</option>
+                <option value="VND">VND</option>
+            </select>
+        </th>
+        <th>
+            <button type="text" onclick="submit()" style="background: lightblue">Convert</button>
+        </th>
+    </tr>
+    <script>function submit() {
+        let giaTriKoDoi = document.getElementById('GiaTri').value;
+        let Nhap1 = document.getElementById('Nhap1').value;
+        let Nhap2 = document.getElementById('Nhap2').value;
+        if (Nhap1 == Nhap2) {
+            alert(giaTriKoDoi);
+        }
+        if (Nhap1 == "VND" && Nhap2 == "USD") {
+            alert(giaTriKoDoi / 23000);
+        }
+        if (Nhap1 == "USD" && Nhap2 == "VND") {
+            alert(giaTriKoDoi * 23000)
+        }
+    }</script>
+</table>
+</body>
+</html>

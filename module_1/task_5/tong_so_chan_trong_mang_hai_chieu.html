@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let mang1 = +prompt("nhập đồ dài mảng lớn");
+    let mang2 = +prompt("nhập độ dài mảng nhỏ");
+    let sum = 0;
+    for (let i = 0; i <= mang1; i++) {
+        arr[i]=+prompt("nhập phần tử " +" của mảng "+i);
+        for (let j = 0; j <= mang2; j++) {
+            arr[j]=+prompt("nhập phần tử " + j +" của mảng "+i);
+            if (arr[j] % 2 === 0) {
+                sum+=arr[j] ;
+            }
+        }
+    }document.write("Tổng các số chẵn là "+sum);
+
+
+    // let arr = [];
+    // let mang1 = +prompt("nhập đồ dài mảng lớn");
+    // let mang2 = +prompt("nhập độ dài mảng nhỏ");
+    // let sum = 0;
+    // for (let i = 0; i <= mang1; i++) {
+    //     arr[i] = [];
+    //     for (let j = 0; j <= mang2; j++) {
+    //         arr[i][j]=+prompt("nhập phần tử " + j +" của mảng "+i);
+    //         if (arr[i][j] % 2 === 0) {
+    //             sum+=arr[i][j] ;
+    //         }
+    //     }
+    // }document.write("Tổng các số chẵn là "+sum);
+</script>
+</body>
+</html>

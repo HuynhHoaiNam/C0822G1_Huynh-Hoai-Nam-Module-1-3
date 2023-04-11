@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function doiCho(number) {
+        let first = 0;
+        let last = numbers.length - 1;
+        while (first < last) {
+            let a = numbers[first];
+            numbers[first] = numbers[last];
+            numbers[last] = a;
+            first++;
+            last--;
+        }
+        return numbers;
+    }
+
+    let numbers = [];
+    // let size = +prompt("Nhập Độ Dài")
+    for (let i = 0; i < size; i++) {
+        numbers[i] = +prompt("Nhập Phần Tử ");
+    }
+    let size = +prompt("Nhập Độ Dài")
+    doiCho(size);
+    document.write(doiCho(numbers));
+
+</script>
+</body>
+</html>

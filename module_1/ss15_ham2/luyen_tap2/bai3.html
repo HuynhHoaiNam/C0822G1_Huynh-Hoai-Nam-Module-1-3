@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let kiemTraSo = +prompt("Nhập Vào Một Số");
+    function tinhGiaiThua() {
+        let luuTru = 1;
+        if (kiemTraSo > 1) {
+            for (let i = 1; i <= kiemTraSo; i++) {
+              luuTru = luuTru * i;
+            }return luuTru;
+        }
+        else {
+            return false;
+        }
+    }
+    document.write(tinhGiaiThua());
+</script>
+</body>
+</html>
